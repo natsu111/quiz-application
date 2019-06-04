@@ -7,7 +7,7 @@ class QuizTest < ActiveSupport::TestCase
   def setup
     @user = users(:michael)
     # このコードは慣習的に正しくない
-    @quiz = @user.quiz.build(content: "Lorem ipsum")
+    @quiz = @user.quizzes.build(content: "Lorem ipsum")
   end
 
   test "should be valid" do
@@ -28,4 +28,10 @@ class QuizTest < ActiveSupport::TestCase
     @quiz.content = "a" * 141
     assert_not @quiz.valid?
   end
+  
+   test "order should be most recent first" do
+    assert_equal quizzes(:most_recent), Quiz.first
+  end
+  
+  
 end

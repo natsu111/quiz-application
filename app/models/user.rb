@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :quiz
+  has_many :quizzes, dependent: :destroy
     
     validates :name, presence: true
     validates :name,  presence: true, length: { maximum: 50 }
