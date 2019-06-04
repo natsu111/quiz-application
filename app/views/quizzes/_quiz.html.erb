@@ -1,0 +1,8 @@
+<li id="quiz-<%= quiz.id %>">
+  <span class="user"><%= link_to quiz.user.name, quiz.user %></span>
+  <span class="content"><%= quiz.content %></span>
+  <span class="answer"><%= quiz.answer %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(quiz.created_at) %> ago.
+  </span>
+</li>

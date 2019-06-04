@@ -7,4 +7,13 @@
       </h1>
     </section>
   </aside>
+  <div class="col-md-8">
+    <% if @user.quizzes.any? %>
+      <h3>quizzes (<%= @user.quizzes.count %>)</h3>
+      <ol class="quizzes">
+        <%= render @quizzes %>
+      </ol>
+      <%= will_paginate @quizzes %>
+    <% end %>
+  </div>
 </div>

@@ -35,7 +35,7 @@ class UserTest < ActiveSupport::TestCase
   
   test "associated quizzes should be destroyed" do
     @user.save
-    @user.quizzes.create!(content: "Lorem ipsum")
+    @user.quizzes.create!(content: "Lorem ipsum", answer: "Lorem ipsum")
     assert_difference 'Quiz.count', -1 do
       @user.destroy
     end
