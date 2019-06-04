@@ -1,8 +1,12 @@
 <li id="quiz-<%= quiz.id %>">
   <span class="user"><%= link_to quiz.user.name, quiz.user %></span>
   <span class="content"><%= quiz.content %></span>
-  <span class="answer"><%= quiz.answer %></span>
+  <span class="answer"><%= quiz.answer%></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(quiz.created_at) %> ago.
+    <% if current_user?(quiz.user) %>
+      <%= link_to "delete", quiz, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
   </span>
 </li>
