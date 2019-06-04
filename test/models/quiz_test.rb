@@ -7,7 +7,7 @@ class QuizTest < ActiveSupport::TestCase
   def setup
     @user = users(:michael)
     # このコードは慣習的に正しくない
-    @quiz = Quiz.new(content: "Lorem ipsum", user_id: @user.id)
+    @quiz = @user.quiz.build(content: "Lorem ipsum")
   end
 
   test "should be valid" do

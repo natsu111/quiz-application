@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :quiz
     
     validates :name, presence: true
     validates :name,  presence: true, length: { maximum: 50 }
