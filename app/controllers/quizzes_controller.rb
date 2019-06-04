@@ -22,7 +22,7 @@ class QuizzesController < ApplicationController
   private
 
     def quiz_params
-      params.require(:mquiz).permit(:content, :answer)
+      params.require(:quiz).permit(:content, :answer)
     end
     
     def correct_user
