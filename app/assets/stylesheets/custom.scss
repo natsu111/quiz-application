@@ -13,9 +13,9 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
-// body {
-//   padding-top: 60px;
-// }
+body {
+  font-size: 16px;
+}
 
 section {
   overflow: auto;
@@ -240,4 +240,33 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+.faq{
+background: #f5f1eb;
+border-radius: 20px;
+padding: 40px 35px;
+margin: 50px auto;
+width: 70%;
+}
+.faq_cont{
+border-bottom: dashed 1px #a07d46;
+padding: 12px 0;
+position: relative;
+font-size: 21px;
+color: #a07d46;
+}
+.faq_anser_click,
+.faq_anser_close{
+cursor: pointer;
+position: absolute;
+right: 0;
+text-decoration: underline;
+}
+.faq_anser{
+display: none;
+}
+.ibl{
+display: inline-block;
+vertical-align: middle;
 }

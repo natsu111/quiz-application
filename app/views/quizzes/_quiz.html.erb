@@ -1,7 +1,26 @@
 <li id="quiz-<%= quiz.id %>">
   <span class="user"><%= link_to quiz.user.name, quiz.user %></span>
   <span class="content"><%= quiz.content %></span>
-  <span class="answer"><%= quiz.answer%></span>
+  
+  <div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">答えを見る</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <div class="panel-body">
+        <span class="content"><%= quiz.answer %></span>
+      
+      </div>
+      <!--<div class="panel-footer">フッター</div>-->
+    </div>
+  </div>
+</div>
+
+
+  
   <span class="timestamp">
     Posted <%= time_ago_in_words(quiz.created_at) %> ago.
     <% if current_user?(quiz.user) %>
