@@ -2,22 +2,28 @@
   <span class="user"><%= link_to quiz.user.name, quiz.user %></span>
   <span class="content"><%= quiz.content %></span>
   
-  <div class="panel-group">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" href="#collapse1">答えを見る</a>
-      </h4>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse">
-      <div class="panel-body">
-        <span class="content"><%= quiz.answer %></span>
-      
-      </div>
-      <!--<div class="panel-footer">フッター</div>-->
-    </div>
-  </div>
+  
+ <p>
+	<a class="btn btn-default" data-toggle="collapse" href=".collapseSample2">
+		答えをみる
+	</a>
+</p>
+<div class="collapse collapseSample2">
+	<div class="well">
+		<span class="answer"><%= quiz.answer %></span>
+	</div>
 </div>
+<!--<div class="collapse collapseSample2">-->
+<!--	<div class="well">-->
+<!--		<span class="answer"><%= quiz.answer %></span>-->
+<!--	</div>-->
+<!--</div>-->
+<!--<div class="collapse collapseSample2">-->
+<!--	<div class="well">-->
+<!--		<span class="answer"><%= quiz.answer %></span>-->
+<!--	</div>-->
+<!--</div>-->
+
 
 
   
